@@ -1,0 +1,35 @@
+### Create new car
+POST http://localhost:8080/cars
+Content-Type: application/json
+
+{
+  "brandName": "newBrandName",
+  "model": "newModel",
+  "productionYear": 2030,
+  "price": "2300.23",
+  "color": "newColor"
+}
+
+### Update car
+PUT http://localhost:8080/cars/3
+Content-Type: application/json
+
+{
+  "brandName": "newBrandName",
+  "model": "newModel",
+  "productionYear": 2040,
+  "price": "2300.23",
+  "color": "newColor"
+}
+
+### Get all car
+GET http://localhost:8080/cars
+
+### Get all cars by brandName
+GET http://localhost:8080/cars?brandName=BMW
+
+### Get all cars between ProductionYear
+GET http://localhost:8080/cars?start=2000&end=2021
+
+### Dellete car by id
+DELETE http://localhost:8080/cars/1
